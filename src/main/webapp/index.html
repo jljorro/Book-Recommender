@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bookrecommender.css">
+
+    <title>Book Recommender</title>
+
+</head>
+<body>
+
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Book Recommender</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a id="recommenderLink" class="nav-link">Recommender System</a>
+                </li>
+                <li class="nav-item active">
+                    <a id="itemLink" class="nav-link">Add Item</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+<div class="container">
+    <div id="recommenderDiv">
+        <div class="row mt-5">
+            <div class="col-sm-12 mt-5">
+                <h1>Recommender System</h1>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-sm-12">
+                <form>
+                    <div class="form-group">
+                        <label for="authorQuery">author</label>
+                        <input type="text" class="form-control" id="authorQuery" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="yearOfPublicationQuery">yearOfPublication</label>
+                        <input type="number" class="form-control" id="yearOfPublicationQuery" required>
+                    </div>
+                    <button id="recommenderSubmit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="recommendationsDiv">
+        <div class="row">
+            <div class="col-sm-12 mt-4">
+                <h1>Recommendations</h1>
+            </div>
+        </div>
+
+        <div id="recommendationResult" class="row mt-2">
+            <div class="col-sm-12">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">isbn</th>
+                      <th scope="col">title</th>
+                      <th scope="col">author</th>
+                      <th scope="col">yearOfPublication</th>
+                      <th scope="col">similarity</th>
+                    </tr>
+                  </thead>
+                  <tbody id="recommendationResultData">     
+                  </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="addItemDiv">
+        <div class="row mt-5">
+            <div class="col-sm-12 mt-5">
+                <h1>Add Item</h1>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-sm-12">
+                <form>
+                    <div class="form-group">
+                        <label for="isbnItem">isbn</label>
+                        <input type="number" class="form-control" id="isbnItem" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="titleItem">title</label>
+                        <input type="text" class="form-control" id="titleItem" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="authorItem">author</label>
+                        <input type="text" class="form-control" id="authorItem" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="yearOfPublicationItem">yearOfPublication</label>
+                        <input type="number" class="form-control" id="yearOfPublicationItem" required>
+                    </div>
+                    <button id="addItemSubmit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script
+        src="http://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="js/bookrecommender.js"></script>
+
+</body>
+</html>

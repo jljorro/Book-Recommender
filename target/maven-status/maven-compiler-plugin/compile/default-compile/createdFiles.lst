@@ -1,0 +1,6 @@
+es/ucm/gaia/services/RecommenderServices$RecommendationResponse.class
+es/ucm/gaia/services/ResponseCorsFilter.class
+es/ucm/gaia/cbr/BookDescription.class
+es/ucm/gaia/cbr/BookConnector.class
+es/ucm/gaia/cbr/BookCBRApplication.class
+es/ucm/gaia/services/RecommenderServices.class
